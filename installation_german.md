@@ -1,12 +1,15 @@
 
 # Installation Archlinux 
 
-Allgemeine Quellen:
+## Keine Haftung
+Ich beschreibe hier mein Vorgehen auf Grund meiner persoenlichen Erfahrung. Nachahmung ohne Garantie auf Funktion und Haftung.
+
+## Allgemeine Quellen
 - http://www.banana-pi.org/downloadall.html
 - https://wiki.archlinux.org/index.php/Banana_Pi#Compile_and_copy_U-Boot_bootloader
 
 
-Voraussetzungen:
+## Voraussetzungen:
 - PC mit Archlinux
 - SD-Karten-Leser
 - SD-Karte ab 4GB
