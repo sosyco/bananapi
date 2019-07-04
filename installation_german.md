@@ -108,7 +108,7 @@ loadkeys de-latin1
 passwd root
 pacman-key --init
 pacman-key --populate archlinuxarm
-pacman -ySu sudo
+pacman -ySu sudo uboot-tools
 useradd -m -g users -G wheel -s /bin/bash $username$
 passwd $username$
 userdel alarm
