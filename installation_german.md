@@ -132,6 +132,7 @@ echo "LANG=de_DE.UTF-8" >> /etc/locale.conf
 echo "LANGUAGE=de_DE" >> /etc/locale.conf
 echo "LC_ALL=C" >> /etc/locale.conf
 echo "KEYMAP=de-latin1" >> /etc/vconsole.conf
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 exit
 reboot
 ```
@@ -211,5 +212,6 @@ while True:
 EOF
 
 sudo python test.py
-# todo: how give user rights to gpio 
 ```
+# ToDo
+- how give user rights to gpio 
