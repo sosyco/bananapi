@@ -16,7 +16,7 @@ but there is no warranty for function. you use this on your own risk.
 - internet-access 
 - monitor with hdmi-input 
 - wired network-connection with dhcp, access between pc and bananapi and internet-access 
-- USB-Tastatur für Ersteinrichtung
+- usb-keyboard for direct input
 
 ## preparation on pc-side (terminal/console)
 
@@ -128,6 +128,7 @@ locale-gen
 echo "LANG=en_US.UTF-8 UTF-8"" >> /etc/locale.conf
 echo "LANGUAGE=en_US" >> /etc/locale.conf
 echo "LC_ALL=C" >> /etc/locale.conf
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 exit
 reboot
 ```
@@ -208,5 +209,6 @@ while True:
 EOF
 
 sudo python test.py
-# todo: how give user rights to gpio 
 ```
+# todo
+- how give user rights to gpio 
