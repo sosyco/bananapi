@@ -152,7 +152,7 @@ export target_disc=/dev/sda
 sudo parted -s ${target_disc} mklabel msdos
 sudo parted -a optimal -- ${target_disc} mkpart primary 2048s 100%
 sudo dd if=/dev/mmcblk0p2 of=${target_disc}1
-sudo fsck.ext4 ${target_disc}1
+sudo e2fsck -f ${target_disc}1
 sudo resize2fs ${target_disc}1
 export target_partuuid=$(sudo blkid ${target_disc}1 | awk '{print $4}')
 
@@ -180,7 +180,7 @@ fi
 EOF
 
 sudo mv /boot/boot.scr /boot/boot.scr.sd-card
-sudo mkimage -A arm -O linux -T script -C none -a 0 -e 0 -n "BananPI boot script" -d boot.cmd.sata boot/boot.scr
+sudo mkimage -A arm -O linux -T script -C none -a 0 -e 0 -n "BananPI boot script" -d boot.cmd.sata /boot/boot.scr
 reboot
 ```
 
