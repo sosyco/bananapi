@@ -88,6 +88,7 @@ sudo umount root
 # install u-boot
 git clone git://git.denx.de/u-boot.git
 cd u-boot
+git checkout tags/v2019.04
 make -j4 ARCH=arm CROSS_COMPILE=arm-none-eabi- Bananapi_defconfig
 make -j4 ARCH=arm CROSS_COMPILE=arm-none-eabi-
 sudo dd if=u-boot-sunxi-with-spl.bin of=${target_disc} bs=1024 seek=8 && sync
